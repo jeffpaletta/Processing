@@ -6,13 +6,10 @@ let sy = [];
 
 let num = 14;
 
+// populate array with images based on 'num'
 function preload() {
   for (let i = 1; i < num; i++) {
-    let n = floor(random(1000));
-    let w = floor(random(2, 6)) * 100;
-    let h = floor(random(2, 6)) * 100;
-    // img[i] = loadImage("https://picsum.photos/" + w + "/" + h + "?image=" + i*3);
-    img[i] = loadImage('https://raw.githubusercontent.com/jeffpaletta/Processing/master/assets/lores/Batch_01/img' + i + '.jpg' );
+    img[i] = loadImage('https://raw.githubusercontent.com/jeffpaletta/Processing/master/assets/lores/Batch_02/img' + i + '.jpg' );
   }
 }
 
@@ -24,19 +21,20 @@ function setup() {
     sx.push(random(-0.1, 0.1));
     let w = img[i].width;
     let h = img[i].height;
-    let n = map(sqrt(w * h), sqrt(200 * 200), sqrt(600 * 600), 3, 0.2);
+    let n = map(sqrt(w * h), sqrt(200 * 200), sqrt(800 * 800), 1, 0.2);
     sy.push(n);
   }
 }
 
 function draw() {
   background(0);
-  for (let i = ; i < num; i++) {
+  for (let i = 1; i < num; i++) {
     imageMode(CENTER);
     image(img[i], x[i], y[i]);
     x[i] += sx[i];
     y[i] += sy[i];
 
+    // Resize image if it is too big to display
     if (y[i] - img[i].height / 2 > height) {
       x[i] = random(width);
       y[i] = y[i] - height - img[i].height - random(100,300);

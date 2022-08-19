@@ -13,7 +13,17 @@ let src = ['img1.jpg',
 	'img13.jpg',
 	'img14.jpg',
 	'img15.jpg',
-	'img16.jpg'
+	'img16.jpg',
+	'img17.jpg',
+	'img18.jpg',
+	'img19.jpg',
+	'img20.jpg',
+	'img21.jpg',
+	'img22.jpg',
+	'img23.jpg',
+	'img24.jpg',
+	'img25.jpg',
+	'img26.jpg',
 ];
 let img = [];
 let circles = [];
@@ -40,7 +50,7 @@ function draw() {
 			if (c.ttl < 1) circles.splice(index, 1);
 		}
 	});
-	let r = random(25, 500), x, y;
+	let r = random(25, 300), x, y;
 	let valid = false;
 	
 	for(let nAttempt = 0; nAttempt < 100 && !valid ; nAttempt += 1) {
