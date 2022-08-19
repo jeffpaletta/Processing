@@ -4,21 +4,21 @@ let y = [];
 let sx = [];
 let sy = [];
 
-let num = 30;
+let num = 14;
 
 function preload() {
-  for (let i = 0; i < num; i++) {
+  for (let i = 1; i < num; i++) {
     let n = floor(random(1000));
     let w = floor(random(2, 6)) * 100;
     let h = floor(random(2, 6)) * 100;
     // img[i] = loadImage("https://picsum.photos/" + w + "/" + h + "?image=" + i*3);
-    img[i] = loadImage(`http://fpoimg.com/&{w}x300?text=Hanselman` + w + "/" + h + "?image=" + i*3);
+    img[i] = loadImage('https://raw.githubusercontent.com/jeffpaletta/Processing/master/assets/lores/Batch_01/img' + i + '.jpg' );
   }
 }
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  for (let i = 0; i < num; i++) {
+  for (let i = 1; i < num; i++) {
     x.push(random(width));
     y.push(random(height));
     sx.push(random(-0.1, 0.1));
@@ -31,7 +31,7 @@ function setup() {
 
 function draw() {
   background(0);
-  for (let i = 0; i < num; i++) {
+  for (let i = ; i < num; i++) {
     imageMode(CENTER);
     image(img[i], x[i], y[i]);
     x[i] += sx[i];
