@@ -1,27 +1,27 @@
-var src = ['225406',
-					 '259803',
-					 '266660',
-					 '276330',
-					 '305823',
-					 '326311',
-					 '326536',
-					 '326784',
-					 '532363',
-					 '733475',
-					 '761963',
-					 '792994',
-					 '1008743',
-					 '1010079'], 
-		img = [],
-		circles = [];
+var src = ['img1.png',
+	'img2.png',
+	'img3.png',
+	'img4.png',
+	'img5.png',
+	'img6.png',
+	'img7.png',
+	'img8.png',
+	'img9.png',
+	'img10.png',
+	'img11.png',
+	'img12.png',
+	'img13.png',
+	'img14.png'
+];
+var img = [];
+var circles = [];
 
 function preload() {
-	src.forEach( 
-  	u => img.push(loadImage('https://images.pexels.com/photos/' + u + '/pexels-photo-' + u + '.jpeg?auto=compress&w=940'))
+	src.forEach(
+		u => img.push(loadImage('https://raw.githubusercontent.com/jeffpaletta/Processing/master/assets/Destinations%20RAW/' + u))
 	);
 }
 
-// https://images.pexels.com/photos/259803/pexels-photo-259803.jpeg?auto=compress&w=940
 function setup() {
 	createCanvas(windowWidth, windowHeight);
 	ellipseMode(RADIUS);
