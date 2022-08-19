@@ -1,31 +1,33 @@
-var src = ['img1.png',
-	'img2.png',
-	'img3.png',
-	'img4.png',
-	'img5.png',
-	'img6.png',
-	'img7.png',
-	'img8.png',
-	'img9.png',
-	'img10.png',
-	'img11.png',
-	'img12.png',
-	'img13.png',
-	'img14.png'
+let src = ['img1.jpg',
+	'img2.jpg',
+	'img3.jpg',
+	'img4.jpg',
+	'img5.jpg',
+	'img6.jpg',
+	'img7.jpg',
+	'img8.jpg',
+	'img9.jpg',
+	'img10.jpg',
+	'img11.jpg',
+	'img12.jpg',
+	'img13.jpg',
+	'img14.jpg',
+	'img15.jpg',
+	'img16.jpg'
 ];
-var img = [];
-var circles = [];
+let img = [];
+let circles = [];
 
 function preload() {
 	src.forEach(
-		u => img.push(loadImage('https://raw.githubusercontent.com/jeffpaletta/Processing/master/assets/Destinations%20RAW/' + u))
+		u => img.push(loadImage('https://raw.githubusercontent.com/jeffpaletta/Processing/master/assets/lores/Batch_02/' + u))
 	);
 }
 
 function setup() {
 	createCanvas(windowWidth, windowHeight);
 	ellipseMode(RADIUS);
-	frameRate(30);
+	frameRate(15);
 	background(0);
 	fill(0, 50);
 }
@@ -33,12 +35,12 @@ function setup() {
 function draw() {
 	circles.forEach((c, index) => {
 		c.ttl -= 1;
-		if(c.ttl < 30) {
+		if(c.ttl < 50) {
 			ellipse(c.x, c.y, c.r + 1, c.r + 1);
 			if (c.ttl < 1) circles.splice(index, 1);
 		}
 	});
-	let r = random(10, 100), x, y;
+	let r = random(25, 500), x, y;
 	let valid = false;
 	
 	for(let nAttempt = 0; nAttempt < 100 && !valid ; nAttempt += 1) {
