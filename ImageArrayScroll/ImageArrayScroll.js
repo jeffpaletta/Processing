@@ -4,7 +4,7 @@ let y = [];
 let sx = [];
 let sy = [];
 
-let num = 14;
+let num = 26;
 
 // populate array with images based on 'num'
 function preload() {
